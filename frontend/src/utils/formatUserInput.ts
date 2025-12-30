@@ -3,7 +3,7 @@
 
 import { type FormattedMiss } from "../types/FormattedMiss";
 
-const cleanUserInput = (unformattedInput: string) => {
+const formatUserInput = (unformattedInput: string) => {
   const formattedInput = unformattedInput
     .trim()
     .toLowerCase()
@@ -28,4 +28,4 @@ const cleanUserInput = (unformattedInput: string) => {
   return formattedMisses;
 };
 
-export default cleanUserInput;
+export default formatUserInput;
