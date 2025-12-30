@@ -1,4 +1,4 @@
-export type FormattedLogins = {
+export type FormattedMiss = {
   login: string;
   missTime: string;
   station: string;
