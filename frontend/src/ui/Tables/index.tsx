@@ -50,8 +50,8 @@ const Tables = ({ formattedMisses }: TablesProps) => {
             <Table.Tr>
               <Table.Th>Login</Table.Th>
               <Table.Th>First stow</Table.Th>
-              <Table.Th>Comment</Table.Th>
-              <Table.Th>ADAPT needed?</Table.Th>
+              <Table.Th className={styles.greyedOut}>Comment</Table.Th>
+              <Table.Th className={styles.greyedOut}>ADAPT needed?</Table.Th>
               <Table.Th>Station</Table.Th>
             </Table.Tr>
           </Table.Thead>
