@@ -1,4 +1,5 @@
 import { Table } from "@mantine/core";
+import styles from "./Tables.module.css";
 import { type FormattedMiss } from "../../types/FormattedMiss";
 
 type TablesProps = {
@@ -69,12 +70,12 @@ const Tables = ({ formattedMisses }: TablesProps) => {
       </p>
 
       {formattedMisses.length > 0 && (
-        <>
+        <div className={styles.tablesContainer}>
           {/* misses don't need to be sorted because they will already be sorted */}
           {renderFloor("P2", p2Misses)}
           {renderFloor("P3", p3Misses)}
           {renderFloor("P4", p4Misses)}
-        </>
+        </div>
       )}
     </div>
   );
