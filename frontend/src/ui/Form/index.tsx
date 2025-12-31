@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Button, TextInput } from "@mantine/core";
 import formatUserInput from "../../utils/formatUserInput";
-import MissesTables from "../MissesTables";
+import MissesTables from "../Tables";
 import { type FormattedMiss } from "../../types/FormattedMiss";
 
 const Form = () => {
