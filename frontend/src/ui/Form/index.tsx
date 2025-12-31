@@ -2,6 +2,7 @@ import { useState } from "react";
 import { Button, TextInput } from "@mantine/core";
 import formatUserInput from "../../utils/formatUserInput";
 import MissesTables from "../Tables";
+import styles from "./Form.module.css";
 import { type FormattedMiss } from "../../types/FormattedMiss";
 
 const Form = () => {
@@ -23,6 +24,7 @@ const Form = () => {
     <div>
       <form onSubmit={handleSubmit}>
         <TextInput
+          className={styles.input}
           placeholder="Paste data here..."
           value={formValue}
           onChange={(e) => setFormValue(e.target.value)}
