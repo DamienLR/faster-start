@@ -19,14 +19,16 @@ const formatUserInput = (unformattedInput: string | null) => {
   const formattedMisses: FormattedMiss[] = [];
   const segmentsSize = 7;
 
-  if (formatUserInput.length > 0) {
+  if (formattedInput.length > 0) {
     for (let i = 0; i < formattedInput.length; i += segmentsSize) {
       const segment = formattedInput.slice(i, i + segmentsSize);
-      formattedMisses.push({
-        login: segment[0],
-        missTime: segment[3],
-        station: segment[5].replace("dz-p-a", ""),
-      });
+      if (segment[5])
+        // required to fix: Uncaught TypeError: can't access property "replace", segment[5] is undefined
+        formattedMisses.push({
+          login: segment[0],
+          missTime: segment[3],
+          station: segment[5].replace("dz-p-a", ""),
+        });
     }
   }
 
