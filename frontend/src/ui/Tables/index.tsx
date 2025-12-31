@@ -1,4 +1,3 @@
-// needed: login, time, station
 import { Table } from "@mantine/core";
 import { type FormattedMiss } from "../../types/FormattedMiss";
 
@@ -68,12 +67,15 @@ const Tables = ({ formattedMisses }: TablesProps) => {
           ? `FS updated. P2 misses: ${p2Misses.length} | P3 misses: ${p3Misses.length} | P4 misses: ${p4Misses.length}`
           : null}
       </p>
-      <>
-        {/* misses don't need to be sorted because they will already be sorted */}
-        {renderFloor("P2", p2Misses)}
-        {renderFloor("P3", p3Misses)}
-        {renderFloor("P4", p4Misses)}
-      </>
+
+      {formattedMisses.length > 0 && (
+        <>
+          {/* misses don't need to be sorted because they will already be sorted */}
+          {renderFloor("P2", p2Misses)}
+          {renderFloor("P3", p3Misses)}
+          {renderFloor("P4", p4Misses)}
+        </>
+      )}
     </div>
   );
 };
